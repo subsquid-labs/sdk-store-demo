@@ -1,0 +1,18 @@
+manifestVersion: subsquid.io/v0.1
+name: store-tutorial
+version: 1
+description: 'The very first evm squid from manifest  '
+build: 
+deploy:
+  secrets:
+    - RPC_ENDPOINT
+  addons:
+    postgres: 
+  processor:
+    cmd:
+      - sqd
+      - process:prod
+  api:
+    cmd:
+      - sqd
+      - serve:prod
